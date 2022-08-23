@@ -1,28 +1,31 @@
-package com.portfoliohjl.joelluna.Entity;
+package com.portfoliohjl.joelluna.Dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 
-@Entity
-public class Persona {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+public class dtoPersona {
+    @NotBlank
     private String nombre;
+    @NotBlank
     private String apellido;
+    @NotBlank
     private String oficio;
+    @NotBlank
     private String descripcion;
+    @NotBlank
     private int edad;
+    @NotBlank
     private String email;
+    @NotBlank
     private String localidad;
+    @NotBlank
     private String hobbies;
+    
+    /* Construcción del dto */
 
-    public Persona() {
+    public dtoPersona() {
     }
 
-    public Persona(String nombre, String apellido, String oficio, String descripcion, int edad, String email, String localidad, String hobbies) {
+    public dtoPersona(String nombre, String apellido, String oficio, String descripcion, int edad, String email, String localidad, String hobbies) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.oficio = oficio;
@@ -31,14 +34,6 @@ public class Persona {
         this.email = email;
         this.localidad = localidad;
         this.hobbies = hobbies;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNombre() {
@@ -104,6 +99,5 @@ public class Persona {
     public void setHobbies(String hobbies) {
         this.hobbies = hobbies;
     }
-    
     
 }
