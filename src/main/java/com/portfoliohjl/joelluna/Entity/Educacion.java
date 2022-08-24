@@ -20,16 +20,18 @@ public class Educacion {
     private int periodoEdu;
     private String carreraEdu;
     private String estado;
+    private String img;
 
     public Educacion() {
     }
 
-    public Educacion(String nombreEdu, String orientacionEdu, int periodoEdu, String carreraEdu, String estado) {
+    public Educacion(String nombreEdu, String orientacionEdu, int periodoEdu, String carreraEdu, String estado, String img) {
         this.nombreEdu = nombreEdu;
         this.orientacionEdu = orientacionEdu;
         this.periodoEdu = periodoEdu;
         this.carreraEdu = carreraEdu;
         this.estado = estado;
+        this.img = img;
     }
 
     public String getOrientacionEdu() {
@@ -78,6 +80,14 @@ public class Educacion {
 
     public void setCarreraEdu(String descripcionE) {
         this.carreraEdu = descripcionE;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
     
     

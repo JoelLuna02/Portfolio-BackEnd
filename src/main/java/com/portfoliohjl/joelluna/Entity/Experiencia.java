@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.portfoliohjl.joelluna.Entity;
 
 import javax.persistence.Entity;
@@ -18,16 +13,18 @@ public class Experiencia {
     private String nombreE;
     private int periodoE;
     private String descripcionE;
+    private String img;
     
     //Constructor de la clase
 
     public Experiencia() {
     }
 
-    public Experiencia(String nombreE, int periodoE, String descripcionE) {
+    public Experiencia(String nombreE, int periodoE, String descripcionE, String img) {
         this.nombreE = nombreE;
         this.periodoE = periodoE;
         this.descripcionE = descripcionE;
+        this.img = img;
     }
     
     //Getters y setters
@@ -62,6 +59,14 @@ public class Experiencia {
 
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
     
 }

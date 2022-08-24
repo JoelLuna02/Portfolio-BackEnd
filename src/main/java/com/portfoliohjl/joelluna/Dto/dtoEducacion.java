@@ -18,16 +18,19 @@ public class dtoEducacion {
     private String carreraEdu;
     @NotBlank
     private String estado;
+    @NotBlank
+    private String img;
 
     public dtoEducacion() {
     }
 
-    public dtoEducacion(String nombreEdu, String orientacionEdu, int periodoEdu, String carreraEdu, String estado) {
+    public dtoEducacion(String nombreEdu, String orientacionEdu, int periodoEdu, String carreraEdu, String estado, String img) {
         this.nombreEdu = nombreEdu;
         this.orientacionEdu = orientacionEdu;
         this.periodoEdu = periodoEdu;
         this.carreraEdu = carreraEdu;
         this.estado = estado;
+        this.img = img;
     }
 
     public String getNombreEdu() {
@@ -68,6 +71,14 @@ public class dtoEducacion {
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
     
 }

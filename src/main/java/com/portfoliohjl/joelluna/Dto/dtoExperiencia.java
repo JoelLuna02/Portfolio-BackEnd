@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.portfoliohjl.joelluna.Dto;
 
 import javax.validation.constraints.NotBlank;
@@ -14,16 +10,19 @@ public class dtoExperiencia {
     private int periodoE;
     @NotBlank
     private String descripcionE;
+    @NotBlank
+    private String img;
     
     //Constructores
 
     public dtoExperiencia() {
     }
 
-    public dtoExperiencia(String nombreE, int periodoE, String descripcionE) {
+    public dtoExperiencia(String nombreE, int periodoE, String descripcionE, String img) {
         this.nombreE = nombreE;
         this.periodoE = periodoE;
         this.descripcionE = descripcionE;
+        this.img = img;
     }
     
         //Getters y Setters de la clase dto
@@ -50,6 +49,14 @@ public class dtoExperiencia {
 
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
     
 }
