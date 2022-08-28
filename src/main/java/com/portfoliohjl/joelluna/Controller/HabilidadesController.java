@@ -56,7 +56,7 @@ public class HabilidadesController {
         Habilidades guardar = new Habilidades(dtoexp.getNombre(), dtoexp.getPorcentaje(), dtoexp.getEstilo(), dtoexp.getIcono());
         shabilidad.save(guardar);
         
-        return new ResponseEntity(new Mensaje("Habilidad agregada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Habilidad agregada"), HttpStatus.CREATED);
     }
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoSkills dtoskill){

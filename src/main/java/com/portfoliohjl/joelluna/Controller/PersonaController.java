@@ -74,7 +74,7 @@ public class PersonaController {
                 dtopers.getEdad(), dtopers.getEmail(), dtopers.getLocalidad(), dtopers.getHobbies()
         );
         spersona.save(pers);
-        return new ResponseEntity(new Mensaje("Persona creada con éxito"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Persona creada con éxito"), HttpStatus.CREATED);
     }
 
     @PutMapping("/update/{id}")

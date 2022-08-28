@@ -64,7 +64,7 @@ public class CEducacion {
                 dtoeducacion.getCarreraEdu(), dtoeducacion.getEstado(), dtoeducacion.getImg()
             );
         sEducacion.save(educacion);
-        return new ResponseEntity(new Mensaje("Educacion creada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Educacion creada"), HttpStatus.CREATED);
                 
     }
     

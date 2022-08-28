@@ -67,7 +67,7 @@ public class CExperiencia {
                 dtoexp.getNombreE(), dtoexp.getPeriodoE(), dtoexp.getDescripcionE(), dtoexp.getImg());
         sExperiencia.save(experiencia);
         
-        return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.CREATED);
     }
     
     @PutMapping("/update/{id}")
